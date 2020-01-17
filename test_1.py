@@ -1,9 +1,15 @@
 from selenium import webdriver
 import pytest
-from Page.Login_page import Objects
-import time
 
-class TestSite1():
+from Page.Login_page1 import Objects
+
+from Page.mainpage import main_ob
+
+#import allure
+#import pytest_html
+
+
+class TestSite():
 
     username = "litvinchucksasha@gmail.com"
 
@@ -14,19 +20,24 @@ class TestSite1():
         self.driver.implicitly_wait(10)
         yield
         self.driver.close()
+        self.driver.quit()
 
     def testsss(self,test_setap,):
-        username = "litvinchucksasha@gmail.com"
+
 
         self.driver.get("https://payop.com/ru/auth/login")
       #  self.driver.find_element_by_id("email").send_keys("litvinchucksasha@gmail.com")
-        Objects.enter_wrong_login(self)
-        Objects.enter_wrong_password(self)
+        Objects.enter_login(self)
+        Objects.enter_password(self)
         Objects.click_enter(self)
-      #  time.sleep(5)
-        assert self.driver.find_element_by_xpath("//span[text()='User not found']")
-       # assert self.
+        #time.sleep(5)
+        #assert self.driver.title == "PayOp - Merchant Panel"
+
+
+        main_ob.clik_on_email(self)
+        assert self.driver.title == "PayOp - Merchant Panel"
+        main_ob.clik_on_exit(self)
        # time.sleep(3)
        # main_ob.clik_on_email(self)
-        #main_ob.clik_on_exit(self)
+       # main_ob.clik_on_exit(self)
 

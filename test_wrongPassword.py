@@ -1,7 +1,6 @@
 from selenium import webdriver
-import re
 import pytest
-from Page.Login_page import Objects
+from Page.Login_page1 import  Objects
 
 
 class TestSite1():
@@ -15,6 +14,7 @@ class TestSite1():
         self.driver.implicitly_wait(10)
         yield
         self.driver.close()
+
 
     def testsss(self,test_setap,):
         username = "litvinchucksasha@gmail.com"
