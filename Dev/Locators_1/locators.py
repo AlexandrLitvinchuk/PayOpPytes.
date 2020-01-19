@@ -1,4 +1,4 @@
-class Locators():
+class Locator():
 
         email_field_id = "email"
         password_field_id = "password"
