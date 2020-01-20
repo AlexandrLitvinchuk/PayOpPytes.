@@ -3,7 +3,8 @@ from Dev.Locators_1.locators import Locator
 
 
 class Objects():
-    id_email = "email"
+    url = "https://payop.com/ru/auth/login"
+    driver_path = "/Users/oleksandrlitvincuk/Downloads/chromedriver2"
 
     def __init__(self,driver):
         self.driver = driver

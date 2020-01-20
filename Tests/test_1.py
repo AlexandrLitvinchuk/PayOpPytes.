@@ -19,7 +19,7 @@ class TestSite():
         #chrome_options.add_argument('--headles')
         global driver
 
-        self.driver=webdriver.Chrome("/Users/oleksandrlitvincuk/Downloads/chromedriver2")
+        self.driver=webdriver.Chrome(Objects.driver_path)
 
         self.driver.implicitly_wait(10)
         yield
@@ -29,7 +29,7 @@ class TestSite():
     def testsss(self,test_setap,):
 
 
-        self.driver.get("https://payop.com/ru/auth/login")
+        self.driver.get(Objects.url)
       #  self.driver.find_element_by_id("email").send_keys("litvinchucksasha@gmail.com")
         Objects.enter_login(self)
         Objects.enter_password(self)
