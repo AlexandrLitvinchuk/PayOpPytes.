@@ -16,17 +16,9 @@ class TestSite1():
         self.driver.close()
 
     def testsss(self,test_setap,):
-        username = "litvinchucksasha@gmail.com"
 
-        self.driver.get("https://payop.com/ru/auth/login")
-      #  self.driver.find_element_by_id("email").send_keys("litvinchucksasha@gmail.com")
+        Objects.open(self)
         Objects.enter_wrong_login(self)
         Objects.enter_wrong_password(self)
         Objects.click_enter(self)
-      #  time.sleep(5)
         assert self.driver.find_element_by_xpath("//span[text()='User not found']")
-       # assert self.
-       # time.sleep(3)
-       # main_ob.clik_on_email(self)
-        #main_ob.clik_on_exit(self)
-

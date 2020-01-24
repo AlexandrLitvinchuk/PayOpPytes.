@@ -1,5 +1,6 @@
 from Dev.Locators_1.login_password import LoginPasswords
 from Dev.Locators_1.locators import Locator
+from selenium import webdriver
 
 
 class Objects():
@@ -9,6 +10,11 @@ class Objects():
     def __init__(self,driver):
         self.driver = driver
 
+    def open(self):
+        self.driver.get(Objects.url)
+
+    def dreiver(self):
+        self.driver=webdriver.Chrome(Objects.driver_path)
 
 
     def enter_login(self):
@@ -27,5 +33,3 @@ class Objects():
 
     def enter_wrong_password(self):
         self.driver.find_element_by_id(Locator.password_field_id).send_keys(LoginPasswords.wrong_password)
-
-

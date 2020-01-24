@@ -28,8 +28,8 @@ class TestSite():
 
     def testsss(self,test_setap,):
 
-
-        self.driver.get(Objects.url)
+        Objects.open(self)
+       # self.driver.get(Objects.url)
       #  self.driver.find_element_by_id("email").send_keys("litvinchucksasha@gmail.com")
         Objects.enter_login(self)
         Objects.enter_password(self)
@@ -44,4 +44,3 @@ class TestSite():
        # time.sleep(3)
        # main_ob.clik_on_email(self)
        # main_ob.clik_on_exit(self)
-

@@ -17,10 +17,7 @@ class TestSite1():
 
 
     def testsss(self,test_setap,):
-        username = "litvinchucksasha@gmail.com"
-
-        self.driver.get("https://payop.com/ru/auth/login")
-      #  self.driver.find_element_by_id("email").send_keys("litvinchucksasha@gmail.com")
+        Objects.open(self)
         Objects.enter_login(self)
         Objects.enter_wrong_password(self)
         Objects.click_enter(self)
