@@ -5,8 +5,6 @@ from Dev.Page.Login_page1 import  Objects
 
 class TestSite1():
 
-    username = "litvinchucksasha@gmail.com"
-
     @pytest.fixture()
     def test_setap(self):
         global driver
